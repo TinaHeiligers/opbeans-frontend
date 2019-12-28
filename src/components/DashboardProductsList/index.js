@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 
 import { TableLoader, TableFiller } from '../TableLoader';
 
+
 const DashboardProductsList = ({productsTop}) => {
 
   return (
@@ -18,7 +19,7 @@ const DashboardProductsList = ({productsTop}) => {
                           <i className="photo icon"></i>
                       </th>
                       <th>Name</th>
-                      <th className="two wide">Sold</th>
+                      <th className="two wide">Stock</th>
                       <th className="three wide">Status</th>
                   </tr>
               </thead>
@@ -34,7 +35,7 @@ const DashboardProductsList = ({productsTop}) => {
                           <td>
                               <Link to={`/products/${product.id}`}>{product.name}</Link>
                           </td>
-                          <td>{product.sold}</td>
+                          <td>{product.stock}</td>
 
                           { product.stock > 0 ? (
                             <td className="positive"><i className="icon checkmark"></i> In stock</td>

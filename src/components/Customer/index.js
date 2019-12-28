@@ -10,38 +10,38 @@ import * as customerActions from '../../actions/customerActions';
 
 class Customer extends Component {
 
-    componentDidMount() {
-        this.props.actions.loadCustomer(this.props.params.id);
-    }
+  componentDidMount() {
+    this.props.actions.loadCustomer(this.props.params.id);
+  }
 
-    render() {
-        const { className } = this.props;
-        return (
-            <div className={classnames('Customer', className)}>
-                <div className="ui vertical stripe segment">
-                    <div className="ui container">
+  render() {
+    const { className } = this.props;
+    return (
+      <div className={classnames('Customer', className)}>
+        <div className="ui vertical stripe segment">
+          <div className="ui container">
 
-                        <CustomerDetail customer={this.props.customer} />
+            <CustomerDetail customer={this.props.customer} />
 
-                    </div>
-                </div>
-            </div>
-        );
-    }
+          </div>
+        </div>
+      </div>
+    );
+  }
 }
 
 Customer.propTypes = {
-    customer: PropTypes.object.isRequired
+  customer: PropTypes.object.isRequired
 };
 
 function mapStateToProps(state, ownProps) {
-    return {
-        customer: state.customer
-    };
+  return {
+    customer: state.customer
+  };
 }
 
 function mapDispatchToProps(dispatch) {
-    return {actions: bindActionCreators(customerActions, dispatch)}
+  return {actions: bindActionCreators(customerActions, dispatch)}
 }
 
 export default connect(mapStateToProps, mapDispatchToProps)(Customer);

@@ -11,7 +11,7 @@ import * as productActions from '../../actions/productActions';
 class Product extends Component {
 
     componentDidMount() {
-        this.props.actions.loadProduct(this.props.params.id);
+        this.props.actions.loadProduct(this.props.match.params.id);
     }
 
     componentWillUnmount() {

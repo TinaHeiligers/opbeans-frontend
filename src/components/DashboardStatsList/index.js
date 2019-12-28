@@ -56,7 +56,7 @@ const DashboardStatsList = ({stats}) => {
                               Customers
                           </Link>
                       </h3>
-                      <span>{stats.data.customers}</span>
+                      <span>{stats.data.customer}</span>
                   </div>
                   <div className="ui segment">
                       <h3 className="ui sub header">

@@ -39,8 +39,8 @@ class App extends Component {
               )}
             />
             <ApmRoute path="/dashboard" component={Dashboard} />
-            <ApmRoute path="/products" component={Products} />
             <ApmRoute path="/products/:id" component={Product} />
+            <ApmRoute path="/products" component={Products} />
             <ApmRoute path="/orders" component={Orders} />
             <ApmRoute path="/orders/:id" component={Order} />
             <ApmRoute path="/customers" component={Customers} />

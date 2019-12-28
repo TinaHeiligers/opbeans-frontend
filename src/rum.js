@@ -36,10 +36,15 @@ window.deactivateLoadGeneration = function () {
     }
 }
 
+const ELASTIC_CONFIG = {
+    service_name: 'my-service-rum',
+    server_url: 'https://8ad00e0711d149fbb56254c9f7851008.apm.us-west1.gcp.cloud.es.io:443'  
+};
+  
 
-let serviceName = window.elasticApmJsBaseServiceName || process.env.ELASTIC_APM_JS_BASE_SERVICE_NAME
+let serviceName = ELASTIC_CONFIG.service_name || window.elasticApmJsBaseServiceName || process.env.ELASTIC_APM_JS_BASE_SERVICE_NAME
 let serviceVersion = window.elasticApmJsBaseServiceVersion || process.env.ELASTIC_APM_JS_BASE_SERVICE_VERSION
-let serverUrl = window.elasticApmJsBaseServerUrl || process.env.ELASTIC_APM_JS_BASE_SERVER_URL
+let serverUrl = ELASTIC_CONFIG.server_url || window.elasticApmJsBaseServerUrl || process.env.ELASTIC_APM_JS_BASE_SERVER_URL
 
 let rumConfig = window.rumConfig || {}
 
