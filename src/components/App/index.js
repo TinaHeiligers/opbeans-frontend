@@ -41,10 +41,10 @@ class App extends Component {
             <ApmRoute path="/dashboard" component={Dashboard} />
             <ApmRoute path="/products/:id" component={Product} />
             <ApmRoute path="/products" component={Products} />
-            <ApmRoute path="/orders" component={Orders} />
             <ApmRoute path="/orders/:id" component={Order} />
-            <ApmRoute path="/customers" component={Customers} />
+            <ApmRoute path="/orders" component={Orders} />
             <ApmRoute path="/customers/:id" component={Customer} />
+            <ApmRoute path="/customers" component={Customers} />
             <Route component={NotFound} />
           </Switch>
         </div>

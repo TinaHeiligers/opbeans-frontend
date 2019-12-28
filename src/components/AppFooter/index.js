@@ -3,7 +3,6 @@ import classnames from 'classnames';
 import { NavLink as Link } from 'react-router-dom';
 
 class AppFooter extends Component {
-
     getSettingsWindow (e) {
         e.preventDefault();
         this.loadSettings();

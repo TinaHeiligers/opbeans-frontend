@@ -11,7 +11,7 @@ import * as orderActions from '../../actions/orderActions';
 class Order extends Component {
 
     componentDidMount() {
-        this.props.actions.loadOrder(this.props.params.id);
+        this.props.actions.loadOrder(this.props.match.params.id);
     }
 
     render() {

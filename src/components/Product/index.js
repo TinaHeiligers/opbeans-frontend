@@ -19,7 +19,7 @@ class Product extends Component {
     }
 
     getCustomers() {
-        this.props.actions.loadProductCustomers(this.props.params.id);
+        this.props.actions.loadProductCustomers(this.props.match.params.id);
     }
 
     render() {

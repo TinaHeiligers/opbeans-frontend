@@ -11,7 +11,7 @@ import * as customerActions from '../../actions/customerActions';
 class Customer extends Component {
 
   componentDidMount() {
-    this.props.actions.loadCustomer(this.props.params.id);
+    this.props.actions.loadCustomer(this.props.match.params.id);
   }
 
   render() {
