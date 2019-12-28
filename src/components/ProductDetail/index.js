@@ -5,9 +5,6 @@ import { Link } from 'react-router-dom';
 import CustomersList from '../CustomersList';
 
 const ProductDetail = ({ product, productCustomers, getCustomers }) => {
-    if(Math.random() > 0.95) {
-        throw new Error("ProductDetail randomly failed to render!");
-    }
 
   return (
     <div>

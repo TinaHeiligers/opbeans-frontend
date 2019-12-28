@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import classnames from 'classnames';
 import { Route, Redirect, Switch } from 'react-router-dom'
-import { ApmRoute } from '@elastic/apm-rum-react'
 
 import './style.css';
 
@@ -27,7 +26,7 @@ class App extends Component {
 
         <div className="AppMain">
           <Switch>
-            <ApmRoute
+            <Route
               exact
               path="/"
               component={() => (
@@ -38,13 +37,13 @@ class App extends Component {
                 />
               )}
             />
-            <ApmRoute path="/dashboard" component={Dashboard} />
-            <ApmRoute path="/products/:id" component={Product} />
-            <ApmRoute path="/products" component={Products} />
-            <ApmRoute path="/orders/:id" component={Order} />
-            <ApmRoute path="/orders" component={Orders} />
-            <ApmRoute path="/customers/:id" component={Customer} />
-            <ApmRoute path="/customers" component={Customers} />
+            <Route path="/dashboard" component={Dashboard} />
+            <Route path="/products/:id" component={Product} />
+            <Route path="/products" component={Products} />
+            <Route path="/orders/:id" component={Order} />
+            <Route path="/orders" component={Orders} />
+            <Route path="/customers/:id" component={Customer} />
+            <Route path="/customers" component={Customers} />
             <Route component={NotFound} />
           </Switch>
         </div>

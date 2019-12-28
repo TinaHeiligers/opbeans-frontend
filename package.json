@@ -19,7 +19,6 @@
     "css-loader": "^1.0.1",
     "detect-port": "1.0.1",
     "dotenv": "2.0.0",
-    "elastic-apm-rum": "file:elastic-apm-rum",
     "eslint": "^5.8.0",
     "eslint-config-react-app": "^0.5.0",
     "eslint-loader": "^2.1.1",
@@ -62,8 +61,6 @@
     "whatwg-fetch": "1.0.0"
   },
   "scripts": {
-    "preinstall": "if ! [ -d elastic-apm-rum ]; then git clone --branch='master' https://github.com/elastic/apm-agent-rum-js elastic-apm-rum --depth 1; fi",
-    "postinstall": "npm install --prefix ./elastic-apm-rum --dev --prod && npx lerna run build --stream && rm -rf ./elastic-apm-rum/node_modules",
     "start": "node scripts/start.js",
     "build": "node scripts/build.js",
     "test": "node scripts/test.js --env=jsdom"
