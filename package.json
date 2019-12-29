@@ -4,6 +4,8 @@
   "private": true,
   "dependencies": {
     "@babel/core": "^7.1.2",
+    "@elastic/apm-rum": "^4.6.0",
+    "@elastic/apm-rum-react": "^0.3.2",
     "autoprefixer": "^9.3.1",
     "babel-eslint": "^10.0.1",
     "babel-loader": "^8.0.4",
